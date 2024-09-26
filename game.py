@@ -37,6 +37,7 @@ while running:
 
 # Quit the game
 pygame.quit()'''
+
 speed = 1
 
 # Game loop
@@ -62,6 +63,11 @@ while running:
     if keys[pygame.K_DOWN]:
         character_y += speed
 
+    if character_x < 0: character_x = SCREEN_WIDTH
+    if character_x > SCREEN_WIDTH: character_x = 0
+    if character_y < 0: character_y = SCREEN_HEIGHT
+    if character_y > SCREEN_HEIGHT: character_y = 0
+
     # Draw character
     pygame.draw.rect(screen, GREEN, (character_x, character_y, character_size, character_size))
     
@@ -69,6 +75,10 @@ while running:
     pygame.display.flip()
 
 pygame.quit()
+
+
+
+
 '''
 # Load sprite
 character_sprite = pygame.image.load("character.png")
