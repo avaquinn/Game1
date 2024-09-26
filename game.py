@@ -37,7 +37,7 @@ while running:
 
 # Quit the game
 pygame.quit()'''
-speed = 5
+speed = 1
 
 # Game loop
 running = True
